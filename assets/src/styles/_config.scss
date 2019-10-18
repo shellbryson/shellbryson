@@ -1,0 +1,39 @@
+// ############################################################################
+// Global fonts
+// ############################################################################
+
+$base-font: 'PT Sans', sans-serif;
+$base-font-body: 'PT Sans', sans-serif;
+$base-font-bold: 'PT Sans', sans-serif;
+$base-font-medium: 'PT Sans', sans-serif;
+$base-font-heading: 'PT Sans Narrow', sans-serif;
+
+// ############################################################################
+// Typography
+// ############################################################################
+
+$body-font-size: 16px;
+$body-font-size-small: 16px;
+$heading-line-height: 1.2;
+$body-line-height: 1.4;
+$body-paragraph-max: 768px;
+
+// ############################################################################
+// Breaks
+// ############################################################################
+
+$xsmall: 400px;
+$small: 768px;
+$medium: 1024px;
+$large: 1200px;
+$xlarge: 1440px;
+
+$site-min-width: 320px;
+$site-max-width: 1440px;
+
+// ############################################################################
+// Animation defaults
+// ############################################################################
+
+$animation-speed: 250ms;
+$animation-speed-slow: 600ms;

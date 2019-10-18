@@ -1,2 +1,1 @@
-# shellbryson
-Ghost template for combination site (writer/developer)
+# Edinburgh SFF

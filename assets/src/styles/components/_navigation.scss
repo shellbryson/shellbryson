@@ -1,0 +1,171 @@
+// *****************************************************************************
+// * Navigation
+// * Primary / Mobile navigation
+// *****************************************************************************
+
+.navigation {
+
+  display: block;
+  position: relative;
+  justify-content: space-between;
+  padding: 1rem;
+
+  &__toggle {
+    display: block;
+    position: absolute;
+    // hacky fix for positioning on mobile
+    top: 12px;
+    right: 0;
+    border: 0;
+    background-color: inherit;
+    outline: none;
+    vertical-align: middle;
+    cursor: pointer;
+    appearance: none;
+
+    &:hover,
+    &:focus {
+      .mz-banner__nav-segment-wrapper {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  &__toggle-wrapper {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    padding-top: 16px;
+    border: 0;
+    transition: 250ms $animation-speed;
+    vertical-align: bottom;
+  }
+
+  &__toggle-icon {
+    transition: $animation-speed;
+
+    // All of the lines
+    &,
+    &::before,
+    &::after {
+      display: block;
+      position: absolute;
+      width: 26px;
+      height: 2px;
+      margin: 0 auto;
+      padding: 0;
+      border-radius: 4px;
+      content: " ";
+      background-color: $color-headings;
+      text-align: center;
+      backface-visibility: visible;
+    }
+
+    // Top line
+    &::before {
+      transform: translateY(-8px);
+      transition: $animation-speed;
+    }
+
+    // Bottomg line
+    &::after {
+      transform: translateY(8px);
+      transition: $animation-speed;
+    }
+  }
+
+  &__menu {
+    display: none;
+    position: absolute;
+    padding: 0;
+    margin-top: 3rem;
+    background: $color-black;
+    color: $color-white;
+    right: 1rem;
+    width: 66%;
+
+    @include small {
+      max-width: 300px;
+    }
+
+    &.js-isOpen {
+      display: block;
+    }
+  }
+
+  &__entry {
+    @include font-smoothing;
+    display: block;
+    position: relative;
+    padding: 1rem 2rem 1rem 1rem;
+  }
+
+  &__link {
+    display: block;
+    margin-bottom: 4px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid $color-transparent;
+    font-weight: lighter;
+    font-size: 1rem;
+    font-family: $base-font;
+    transition: 400ms;
+    text-transform: uppercase;
+    color: $color-white;
+    font-family: $base-font-heading;
+    font-size: 18px;
+
+    &--active {
+
+    }
+  }
+
+}
+
+.show {
+  display: block;
+}
+
+// *****************************************************************************
+// * Animate burger
+// *****************************************************************************
+
+// Menu Open: hide central segment
+.navigation__toggle.js-isOpen .navigation__toggle-icon {
+  background-color: transparent;
+}
+
+// Menu Open: animate top segment
+.navigation__toggle.js-isOpen .navigation__toggle-icon::before {
+  background-color: $color-black;
+  animation: $animation-speed twistLeft;
+  transform: translateY(0);
+  animation-delay: 250ms;
+  animation-fill-mode: forwards;
+  transform-origin: 50% 50%;
+}
+
+// Menu Open: hide bottom segment:
+.navigation__toggle.js-isOpen .navigation__toggle-icon::after {
+  background-color: $color-black;
+  animation: $animation-speed twistRight;
+  transform: translateY(-5px);
+  animation-delay: 250ms;
+  animation-fill-mode: forwards;
+  transform-origin: 50% 50%;
+}
+
+// *****************************************************************************
+// * Keyframes
+// *****************************************************************************
+
+@keyframes twistLeft {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-45deg);  }
+}
+
+@keyframes twistRight {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(45deg); }
+}
