@@ -1,22 +1,11 @@
 {{!< default}}
 
 <div class="lane">
-  <div class="cols">
-
-    {{#get "pages" filter="slug:home" include="tags,authors" as |page|}}
-    {{#page}}
-
-    <div class="sff__panel">
-      <div class="sff__panel-row">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div>
-          <img src="{{@site.logo}}" alt="Edinburgh SF/F logo" />
-        </div>
-      </div>
-      <div class="sff__content">
-        <h2>{{title}}</h2>
+  <div>
+    {{#get "pages" filter="tag:hash-home-intro" include="tags,authors" as |page|}}
+      {{#page}}
+      <div class="panel">
+        <h1>{{title}}</h1>
         {{content}}
         {{#if feature_image}}
         <div>
@@ -24,9 +13,40 @@
         </div>
         {{/if}}
       </div>
-    </div>
+      {{/page}}
+    {{/get}}
+  </div>
+</div>
 
-    {{/page}}
+<div class="lane">
+  <div class="split">
+
+    {{#get "pages" filter="tag:hash-home-code" include="tags,authors" as |page|}}
+      {{#page}}
+        <div class="panel">
+          <h2>{{title}}</h2>
+          {{content}}
+          {{#if feature_image}}
+          <div>
+            <img src="{{img_url feature_image}}" alt="{{title}}" class="feature-image" />
+          </div>
+          {{/if}}
+        </div>
+      {{/page}}
+    {{/get}}
+
+    {{#get "pages" filter="tag:hash-home-write" include="tags,authors" as |page|}}
+      {{#page}}
+        <div class="panel">
+          <h2>{{title}}</h2>
+          {{content}}
+          {{#if feature_image}}
+          <div>
+            <img src="{{img_url feature_image}}" alt="{{title}}" class="feature-image" />
+          </div>
+          {{/if}}
+        </div>
+      {{/page}}
     {{/get}}
 
   </div>
