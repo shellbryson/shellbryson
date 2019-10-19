@@ -160,28 +160,6 @@ h5 a {
 h6 a {
   color: #ffffff; }
 
-h1 {
-  font-size: 5rem;
-  line-height: 1.2em;
-  text-indent: -3px; }
-
-h2 {
-  font-size: 4rem;
-  line-height: 1.2em;
-  text-indent: -2px; }
-
-h3 {
-  font-size: 3.5rem; }
-
-h4 {
-  font-size: 3rem; }
-
-h5 {
-  font-size: 2.5rem; }
-
-h6 {
-  font-size: 2rem; }
-
 h1,
 h2,
 h3,
@@ -192,18 +170,6 @@ h5 {
   font-weight: bold;
   color: #ffffff;
   transition: 250ms; }
-  .lane--inverse h1, .lane--inverse
-  h2, .lane--inverse
-  h3, .lane--inverse
-  h4, .lane--inverse
-  h5 {
-    color: #ffffff; }
-  .lane--masthead h1, .lane--masthead
-  h2, .lane--masthead
-  h3, .lane--masthead
-  h4, .lane--masthead
-  h5 {
-    text-shadow: 2px 2px 16px #ffffff; }
   .code h1, .code
   h2, .code
   h3, .code
@@ -231,23 +197,6 @@ h1 {
       font-size: 3rem;
       margin-bottom: 3rem;
       line-height: 1.05; } }
-  h1.sff-title {
-    display: block;
-    width: 100%;
-    font-size: 3rem;
-    padding-top: 1rem;
-    border-top: 0.5rem solid #000000;
-    text-shadow: 0 0 14px rgba(255, 255, 255, 0.88); }
-    @media (min-width: 768px) {
-      h1.sff-title {
-        margin-bottom: 0;
-        font-size: 4rem;
-        line-height: 1.13; } }
-    @media (min-width: 1024px) {
-      h1.sff-title {
-        margin-bottom: 0;
-        font-size: 6rem;
-        line-height: 1.05; } }
 
 h2 {
   font-size: 1.63rem;
@@ -263,22 +212,14 @@ h2 {
       font-size: 2.25rem;
       margin-bottom: 2.25rem;
       line-height: 1.25; } }
-  h2.sff-strap {
-    display: block;
-    width: 100%;
-    font-size: 2rem;
-    text-transform: uppercase;
-    text-shadow: 0 0 14px rgba(255, 255, 255, 0.88); }
-    @media (min-width: 768px) {
-      h2.sff-strap {
-        font-size: 2rem;
-        margin-bottom: 0;
-        line-height: 1.25; } }
-    @media (min-width: 1024px) {
-      h2.sff-strap {
-        font-size: 2.25rem;
-        margin-bottom: 0;
-        line-height: 1.25; } }
+  .code h2 {
+    text-transform: lowercase; }
+    .code h2::before {
+      display: inline-block;
+      content: "<"; }
+    .code h2::after {
+      display: inline-block;
+      content: "/>"; }
 
 h3 {
   font-size: 1.37rem;
@@ -376,10 +317,23 @@ a {
   font-family: "PT Sans", sans-serif;
   font-weight: 600;
   text-decoration: none; }
-  .sff__content a {
-    color: #ffffff; }
-    .sff__content a:focus, .sff__content a:hover {
-      color: #ffffff; }
+  a .button {
+    color: #ffffff;
+    text-decoration: none; }
+  .code a {
+    font-family: "Ubuntu Mono", monospace; }
+  .write a {
+    font-family: "EB Garamond", serif; }
+
+.button {
+  color: #ffffff;
+  text-decoration: none; }
+  .code .button {
+    padding: 4px;
+    font-family: "Ubuntu Mono", monospace;
+    border: 1px solid #ffffff; }
+  .write .button {
+    font-family: "EB Garamond", serif; }
 
 .link {
   font-family: "PT Sans", sans-serif;
@@ -1387,5 +1341,6 @@ textarea {
     align-items: center;
     width: 100%; }
   .navigation .right {
-    display: flex; }
+    display: flex;
+    margin-right: -1rem; }
 /*# sourceMappingURL=screen.css.map */

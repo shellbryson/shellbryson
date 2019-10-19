@@ -32,12 +32,23 @@
           <img src="{{img_url feature_image}}" alt="{{title}}" class="feature-image" />
         </div>
         {{/if}}
-
       </div>
       {{/page}}
       {{/get}}
 
       <div class="panel">
+        <h2>Projects</h2>
+        <div class="grid">
+          {{#get "pages" filter="tag:project" limit="9" include="tags,authors" as |page|}}
+          {{#page}}
+          {{> card-project}}
+          {{/page}}
+          {{/get}}
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Posts</h2>
         <div class="grid">
           {{#get "posts" filter="tag:code" limit="9" include="tags,authors" as |post|}}
           {{#post}}
@@ -64,6 +75,7 @@
       {{/get}}
 
       <div class="panel">
+        <h2>Posts</h2>
         <div class="grid">
           {{#get "posts" filter="tag:write" limit="9" include="tags,authors" as |post|}}
           {{#post}}

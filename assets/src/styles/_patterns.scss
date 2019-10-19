@@ -56,33 +56,33 @@ p {
   }
 }
 
-h1 {
-  font-size: 5rem;
-  line-height: 1.2em;
-  text-indent: -3px;
-}
+// h1 {
+//   font-size: 5rem;
+//   line-height: 1.2em;
+//   text-indent: -3px;
+// }
 
-h2 {
-  font-size: 4rem;
-  line-height: 1.2em;
-  text-indent: -2px;
-}
+// h2 {
+//   font-size: 4rem;
+//   line-height: 1.2em;
+//   text-indent: -2px;
+// }
 
-h3 {
-  font-size: 3.5rem;
-}
+// h3 {
+//   font-size: 3.5rem;
+// }
 
-h4 {
-  font-size: 3rem;
-}
+// h4 {
+//   font-size: 3rem;
+// }
 
-h5 {
-  font-size: 2.5rem;
-}
+// h5 {
+//   font-size: 2.5rem;
+// }
 
-h6 {
-  font-size: 2rem;
-}
+// h6 {
+//   font-size: 2rem;
+// }
 
 h1,
 h2,
@@ -90,18 +90,9 @@ h3,
 h4,
 h5 {
   @include font-smoothing;
-  // font-family: $base-font-heading;
   font-weight: bold;
   color: $color-headings;
   transition: $animation-speed;
-
-  .lane--inverse & {
-    color: $color-white;
-  }
-
-  .lane--masthead & {
-    text-shadow: 2px 2px 16px $color-white;
-  }
 
   .code & {
     font-family: $base-font-heading-code;
@@ -128,27 +119,6 @@ h1 {
     margin-bottom: 3rem;
     line-height: 1.05;
   }
-
-  &.sff-title {
-    display: block;
-    width: 100%;
-    font-size: 3rem;
-    padding-top: 1rem;
-    border-top: 0.5rem solid $color-black;
-    text-shadow: 0 0 14px rgba($color-white,0.88);
-
-    @include small {
-      margin-bottom: 0;
-      font-size: 4rem;
-      line-height: 1.13;
-    }
-
-    @include medium {
-      margin-bottom: 0;
-      font-size: 6rem;
-      line-height: 1.05;
-    }
-  }
 }
 
 h2 {
@@ -168,23 +138,17 @@ h2 {
     line-height: 1.25;
   }
 
-  &.sff-strap {
-    display: block;
-    width: 100%;
-    font-size: 2rem;
-    text-transform: uppercase;
-    text-shadow: 0 0 14px rgba($color-white,0.88);
+  .code & {
+    text-transform: lowercase;
 
-    @include small {
-      font-size: 2rem;
-      margin-bottom: 0;
-      line-height: 1.25;
+    &::before {
+      display: inline-block;
+      content: "<";
     }
 
-    @include medium {
-      font-size: 2.25rem;
-      margin-bottom: 0;
-      line-height: 1.25;
+    &::after {
+      display: inline-block;
+      content: "/>";
     }
   }
 }
@@ -343,14 +307,35 @@ a {
   font-weight: 600;
   text-decoration: none;
 
-  .sff__content & {
-    color: $color-body;
-
-    &:focus,
-    &:hover {
-      color: $color-brand;
-    }
+  .button {
+    color: $color-light;
+    text-decoration: none;
   }
+
+  .code & {
+    font-family: $base-font-body-code;
+  }
+
+  .write & {
+    font-family: $base-font-body-write;
+  }
+
+}
+
+.button {
+  color: $color-light;
+  text-decoration: none;
+
+  .code & {
+    padding: 4px;
+    font-family: $base-font-body-code;
+    border: 1px solid $color-light;
+  }
+
+  .write & {
+    font-family: $base-font-body-write;
+  }
+
 }
 
 // In content, optionally add this class for better typography
