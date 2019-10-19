@@ -1,13 +1,9 @@
 $(function ($) {
 
   const $body = document.querySelector('body');
-  const $navToggle = $('[data-navigation-toggle]');
-  const $navSecondaryToggle = $('[data-navigation-secondary-toggle]');
-  const $nav = $('[data-navigation]');
-  const $navSecondary = $('[data-subnavigation]');
-  const $menuItems = $nav.find('li');
-  const $menuLinks = $menuItems.find('a');
-  const is_open = 'js-isOpen';
+  const $navToggle = $(".hamburger");
+  const $navigation = $(".navigation");
+  const is_open = "is-active";
   const today = moment().format();
   let resizeEnd;
 
@@ -102,28 +98,10 @@ $(function ($) {
       .attr('aria-expanded') === 'true' ?
       $this.attr('aria-expanded', false) : $this.attr('aria-expanded', true);
 
-    $nav.toggleClass(is_open)
-      .attr('aria-hidden') === 'true' ?
-      $nav.attr('aria-hidden', false) : $nav.attr('aria-hidden', true);
+    $navigation.toggleClass(is_open).attr("aria-hidden") === "true"
+      ? $navigation.attr("aria-hidden", false)
+      : $navigation.attr("aria-hidden", true);
 
-    $menuLinks.attr('tabindex') === '-1' ?
-      $menuLinks.attr('tabindex', '') : $menuLinks.attr('tabindex', '-1');
-
-  });
-
-  $navSecondaryToggle.on('click', function(e) {
-    const $this = $(this);
-    e.preventDefault();
-
-    $(this).toggleClass("active")
-      .attr('aria-expanded') === 'true' ?
-      $(this).attr('aria-expanded', false) : $(this).attr('aria-expanded', true);
-
-    $navSecondary.toggleClass("active")
-      .attr('aria-hidden') === 'true' ?
-      $navSecondary.attr('aria-hidden', false) : $navSecondary.attr('aria-hidden', true);
-
-    resetScrollPosition();
   });
 
   /////////////////////////////////////////////////////////////////////////////
