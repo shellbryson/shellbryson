@@ -83,6 +83,17 @@ body {
   .split > div {
     width: 100%; }
 
+.split-uneven {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  margin-top: 3rem; }
+  @media (min-width: 768px) {
+    .split-uneven {
+      grid-template-columns: 2fr 1fr; } }
+  .split-uneven > div {
+    width: 100%; }
+
 .grid {
   display: grid;
   grid-template-columns: 1fr;
