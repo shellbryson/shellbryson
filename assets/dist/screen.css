@@ -82,7 +82,8 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr; }
+  grid-template-columns: 1fr;
+  gap: 1rem; }
   @media (min-width: 1024px) {
     .grid {
       grid-template-columns: 1fr 1fr; } }
@@ -90,15 +91,26 @@ body {
 .panel {
   padding: 1rem; }
 
-.card {
-  border: 1px solid red; }
-
 .code {
   background-color: #1d232c;
-  font-family: "Courier New" !important; }
+  font-family: "Courier New" !important;
+  transition: 1s;
+  opacity: 1; }
 
 .write {
-  background-color: #232a35; }
+  background-color: #232a35;
+  transition: 1s;
+  opacity: 1; }
+
+.reveal {
+  padding-top: 2rem;
+  opacity: 0.5; }
+  .reveal--delay-1 {
+    transition-delay: 600ms; }
+  .reveal--delay-2 {
+    transition-delay: 700ms; }
+  .reveal--delay-3 {
+    transition-delay: 1000ms; }
 
 body {
   font-family: "PT Sans", sans-serif; }
@@ -169,7 +181,7 @@ h5 {
   -moz-osx-font-smoothing: grayscale;
   font-weight: bold;
   color: #ffffff;
-  transition: 250ms; }
+  transition: 1s; }
   .code h1, .code
   h2, .code
   h3, .code
@@ -216,10 +228,15 @@ h2 {
     text-transform: lowercase; }
     .code h2::before {
       display: inline-block;
-      content: "<"; }
+      content: "<";
+      color: rgba(255, 255, 255, 0.2); }
     .code h2::after {
       display: inline-block;
-      content: "/>"; }
+      content: "/>";
+      color: rgba(255, 255, 255, 0.2); }
+  .write h2 {
+    display: inline-block;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.5); }
 
 h3 {
   font-size: 1.37rem;
@@ -235,6 +252,19 @@ h3 {
       font-size: 1.75rem;
       margin-bottom: 1.75rem;
       line-height: 1.25; } }
+  .code h3 {
+    text-transform: lowercase; }
+    .code h3::before {
+      display: inline-block;
+      content: "(";
+      color: rgba(255, 255, 255, 0.2); }
+    .code h3::after {
+      display: inline-block;
+      content: ") => {}";
+      color: rgba(255, 255, 255, 0.2); }
+  .write h3 {
+    display: inline-block;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.5); }
 
 h4 {
   font-size: 1.13rem;
@@ -1328,6 +1358,8 @@ textarea {
     color: rgba(255, 255, 255, 0.2); }
   .navigation__logo {
     margin-right: 1rem; }
+    .navigation__logo img {
+      width: 32px; }
   .navigation__actions {
     display: flex;
     padding: 0 1rem;
@@ -1343,4 +1375,15 @@ textarea {
   .navigation .right {
     display: flex;
     margin-right: -1rem; }
+
+.card {
+  padding: 1rem; }
+  .card h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem; }
+  .code .card {
+    background-color: rgba(255, 255, 255, 0.1); }
+  .write .card {
+    background-color: #171c23; }
 /*# sourceMappingURL=screen.css.map */

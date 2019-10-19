@@ -5,7 +5,7 @@
     {{#get "pages" filter="tag:hash-home-intro" include="tags,authors" as |page|}}
       {{#page}}
       <div class="panel">
-        <h1>{{title}}</h1>
+        <h1 class="reveal reveal--delay-1">{{title}}</h1>
         {{content}}
         {{#if feature_image}}
         <div>
@@ -21,7 +21,7 @@
 <div class="lane">
   <div class="split">
 
-    <div class="code">
+    <div class="code reveal reveal--delay-2">
       {{#get "pages" filter="tag:hash-home-code" include="tags,authors" as |page|}}
       {{#page}}
       <div class="panel">
@@ -37,7 +37,7 @@
       {{/get}}
 
       <div class="panel">
-        <h2>Projects</h2>
+        <h3>Projects</h3>
         <div class="grid">
           {{#get "pages" filter="tag:project" limit="9" include="tags,authors" as |page|}}
           {{#page}}
@@ -45,10 +45,11 @@
           {{/page}}
           {{/get}}
         </div>
+        <a href="/projects">More projects...</a>
       </div>
 
       <div class="panel">
-        <h2>Posts</h2>
+        <h3>Posts</h3>
         <div class="grid">
           {{#get "posts" filter="tag:code" limit="9" include="tags,authors" as |post|}}
           {{#post}}
@@ -56,10 +57,11 @@
           {{/post}}
           {{/get}}
         </div>
+        <a href="/code">More posts...</a>
       </div>
     </div>
 
-    <div class="write">
+    <div class="write reveal reveal--delay-3">
       {{#get "pages" filter="tag:hash-home-write" include="tags,authors" as |page|}}
       {{#page}}
       <div class="panel">
@@ -83,6 +85,7 @@
           {{/post}}
           {{/get}}
         </div>
+        <a href="/writing">More posts...</a>
       </div>
     </div>
 

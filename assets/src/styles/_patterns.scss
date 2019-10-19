@@ -56,34 +56,6 @@ p {
   }
 }
 
-// h1 {
-//   font-size: 5rem;
-//   line-height: 1.2em;
-//   text-indent: -3px;
-// }
-
-// h2 {
-//   font-size: 4rem;
-//   line-height: 1.2em;
-//   text-indent: -2px;
-// }
-
-// h3 {
-//   font-size: 3.5rem;
-// }
-
-// h4 {
-//   font-size: 3rem;
-// }
-
-// h5 {
-//   font-size: 2.5rem;
-// }
-
-// h6 {
-//   font-size: 2rem;
-// }
-
 h1,
 h2,
 h3,
@@ -92,7 +64,7 @@ h5 {
   @include font-smoothing;
   font-weight: bold;
   color: $color-headings;
-  transition: $animation-speed;
+  transition: 1s;
 
   .code & {
     font-family: $base-font-heading-code;
@@ -144,12 +116,19 @@ h2 {
     &::before {
       display: inline-block;
       content: "<";
+      color: rgba($color-body, 0.2);
     }
 
     &::after {
       display: inline-block;
       content: "/>";
+      color: rgba($color-body, 0.2);
     }
+  }
+
+  .write & {
+    display: inline-block;
+    border-bottom: 1px dotted rgba($color-light, 0.5);
   }
 }
 
@@ -168,6 +147,27 @@ h3 {
     font-size: 1.75rem;
     margin-bottom: 1.75rem;
     line-height: 1.25;
+  }
+
+  .code & {
+    text-transform: lowercase;
+
+    &::before {
+      display: inline-block;
+      content: "(";
+      color: rgba($color-body, 0.2);
+    }
+
+    &::after {
+      display: inline-block;
+      content: ") => {}";
+      color: rgba($color-body, 0.2);
+    }
+  }
+
+  .write & {
+    display: inline-block;
+    border-bottom: 1px dotted rgba($color-light, 0.5);
   }
 }
 

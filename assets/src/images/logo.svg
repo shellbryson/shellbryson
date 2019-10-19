@@ -1,0 +1,19 @@
+
+<svg width="1500px" height="1500px" viewBox="0 0 1500 1500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="V6-Copy">
+            <polygon id="bg9" fill="#191E26" transform="translate(1250.000000, 1250.000000) rotate(540.000000) translate(-1250.000000, -1250.000000) " points="1000 1500 1000 1000 1500 1000"></polygon>
+            <polygon id="bg4" fill="#8F8F8F" transform="translate(750.000000, 250.000000) rotate(450.000000) translate(-750.000000, -250.000000) " points="500 500 500 1.63424829e-13 1000 1.64135372e-12"></polygon>
+            <polygon id="bg3" fill="#989898" transform="translate(750.000000, 250.000000) rotate(270.000000) translate(-750.000000, -250.000000) " points="500 500 500 1.70530257e-13 1000 2.27373675e-13"></polygon>
+            <polygon id="bg2" fill="#ACABAB" transform="translate(250.000000, 250.000000) rotate(540.000000) translate(-250.000000, -250.000000) " points="-1.13686838e-13 500 9.86076132e-29 1.13686838e-13 500 5.1159077e-13"></polygon>
+            <polygon id="bg1" fill="#191E26" points="0 500 0 0 500 0"></polygon>
+            <polygon id="chev4" fill="#FF122F" points="500 1000 1000 1500 0 1500"></polygon>
+            <polygon id="chev3" fill="#D20C24" points="999.5 1500 500 1000 1500 1000"></polygon>
+            <polygon id="chev3" fill="#191E26" transform="translate(251.656250, 1000.000000) rotate(-90.000000) translate(-251.656250, -1000.000000) " points="251.15625 1250 -248.34375 750 751.65625 750"></polygon>
+            <polygon id="chev3" fill="#191E26" transform="translate(1247.750000, 505.875000) rotate(90.000000) translate(-1247.750000, -505.875000) " points="1247.25 755.875 747.75 255.875 1747.75 255.875"></polygon>
+            <polygon id="chev2" fill="#9A0013" points="1000 500 1500 1000 500 1000"></polygon>
+            <polygon id="chev1" fill="#64020E" points="500 1000 0 500 1000 500"></polygon>
+            <polygon id="line4" fill="#D20C24" points="1000 500 1000 0 1500 0"></polygon>
+        </g>
+    </g>
+</svg>
