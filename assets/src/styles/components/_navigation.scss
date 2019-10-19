@@ -4,9 +4,20 @@
 // *****************************************************************************
 
 .navigation {
+  color: $color-navigation-fg;
+  align-items: center;
+
+  &__title {
+    font-size: 2rem;
+  }
+
+  &__logo {
+
+  }
 
   &__actions {
     display: flex;
+    background-color: $color-navigation-bg;
   }
 
   &__menu {
@@ -18,10 +29,12 @@
   }
 
   .left {
+    display: flex;
+    align-items: center;
     width: 100%;
   }
 
   .right {
-
+    display: flex;
   }
 }

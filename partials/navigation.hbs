@@ -1,10 +1,13 @@
 <nav class="navigation">
 
   <div class="navigation__actions">
-    <div class="left">Logo</div>
+    <div class="left">
+      <div class="navigation__logo">Logo</div>
+      <div class="navigation__title">{{@site.title}}</div>
+    </div>
     <div class="right">
       <div class="navigation__mobile">
-        <button class="hamburger hamburger--spin" type="button">
+        <button class="hamburger hamburger--elastic" type="button" aria-expanded="false">
           <span class="hamburger-box">
             <span class="hamburger-inner"></span>
           </span>
@@ -13,7 +16,7 @@
     </div>
   </div>
 
-  <ul class="navigation__menu" data-navigation aria-hidden="false" role="menu">
+  <ul class="navigation__menu" data-navigation aria-hidden="true" role="menu">
 
     {{#foreach navigation}}
       <li class="navigation__entry" role="menuitem">

@@ -3,6 +3,7 @@ $(function ($) {
   const $body = document.querySelector('body');
   const $navToggle = $(".hamburger");
   const $navigation = $(".navigation");
+  const $navigationMenu = $(".navigation__menu");
   const is_open = "is-active";
   const today = moment().format();
   let resizeEnd;
@@ -70,16 +71,7 @@ $(function ($) {
   /////////////////////////////////////////////////////////////////////////////
 
   function resizeMenu() {
-    // Hide primary nav
-    $navToggle.removeClass(is_open).attr('aria-expanded', false);
-    $nav.removeClass(is_open);
 
-    // Hide secondary menu on any resizing
-    $navSecondaryToggle.removeClass("active").attr('aria-expanded', false);
-    $navSecondary.removeClass("active").attr('aria-hidden', true);
-
-    $body.classList.remove('mz-no-scroll');
-    $nav.css('height', 'inherit');
   }
 
   // Used to prevent page becoming "fixed" while partly out of viewport on
@@ -98,9 +90,10 @@ $(function ($) {
       .attr('aria-expanded') === 'true' ?
       $this.attr('aria-expanded', false) : $this.attr('aria-expanded', true);
 
-    $navigation.toggleClass(is_open).attr("aria-hidden") === "true"
-      ? $navigation.attr("aria-hidden", false)
-      : $navigation.attr("aria-hidden", true);
+    $navigation.toggleClass(is_open);
+    $navigationMenu.attr("aria-hidden") === "true"
+      ? $navigationMenu.attr("aria-hidden", false)
+      : $navigationMenu.attr("aria-hidden", true);
 
   });
 
