@@ -4,19 +4,25 @@
 // *****************************************************************************
 
 .navigation {
+
   color: $color-navigation-fg;
   align-items: center;
+  font-family: $base-font-heading;
 
   &__title {
-    font-size: 2rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: rgba($color-navigation-fg, 0.2%);
   }
 
   &__logo {
-
+    margin-right: 1rem;
   }
 
   &__actions {
     display: flex;
+    padding: 0 1rem;
     background-color: $color-navigation-bg;
   }
 

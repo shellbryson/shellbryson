@@ -16,7 +16,6 @@ body {
 // ############################################################################
 
 p {
-  font-family: $base-font-body;
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.38;
@@ -27,8 +26,12 @@ p {
     margin-bottom: 0;
   }
 
-  .sff__footer & {
-    font-size: 0.75rem;
+  .code & {
+    font-family: $base-font-heading-code;
+  }
+
+  .write & {
+    font-family: $base-font-heading-write;
   }
 }
 
@@ -36,13 +39,58 @@ p {
 // Headings
 // ############################################################################
 
+%heading {
+  text-rendering: optimizeLegibility;
+  line-height: 1;
+  margin-top: 20px;
+  letter-spacing: 2px;
+  font-weight: normal;
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    @extend %heading;
+    a {
+      color: $color-headings;
+    }
+  }
+}
+
+h1 {
+  font-size: 5rem;
+  line-height: 1.2em;
+  text-indent: -3px;
+}
+
+h2 {
+  font-size: 4rem;
+  line-height: 1.2em;
+  text-indent: -2px;
+}
+
+h3 {
+  font-size: 3.5rem;
+}
+
+h4 {
+  font-size: 3rem;
+}
+
+h5 {
+  font-size: 2.5rem;
+}
+
+h6 {
+  font-size: 2rem;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5 {
   @include font-smoothing;
-  font-family: $base-font-heading;
+  // font-family: $base-font-heading;
   font-weight: bold;
   color: $color-headings;
   transition: $animation-speed;
@@ -53,6 +101,14 @@ h5 {
 
   .lane--masthead & {
     text-shadow: 2px 2px 16px $color-white;
+  }
+
+  .code & {
+    font-family: $base-font-heading-code;
+  }
+
+  .write & {
+    font-family: $base-font-heading-write;
   }
 }
 

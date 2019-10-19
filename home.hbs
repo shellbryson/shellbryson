@@ -21,33 +21,58 @@
 <div class="lane">
   <div class="split">
 
-    {{#get "pages" filter="tag:hash-home-code" include="tags,authors" as |page|}}
+    <div class="code">
+      {{#get "pages" filter="tag:hash-home-code" include="tags,authors" as |page|}}
       {{#page}}
-        <div class="panel">
-          <h2>{{title}}</h2>
-          {{content}}
-          {{#if feature_image}}
-          <div>
-            <img src="{{img_url feature_image}}" alt="{{title}}" class="feature-image" />
-          </div>
-          {{/if}}
+      <div class="panel">
+        <h2>{{title}}</h2>
+        {{content}}
+        {{#if feature_image}}
+        <div>
+          <img src="{{img_url feature_image}}" alt="{{title}}" class="feature-image" />
         </div>
-      {{/page}}
-    {{/get}}
+        {{/if}}
 
-    {{#get "pages" filter="tag:hash-home-write" include="tags,authors" as |page|}}
-      {{#page}}
-        <div class="panel">
-          <h2>{{title}}</h2>
-          {{content}}
-          {{#if feature_image}}
-          <div>
-            <img src="{{img_url feature_image}}" alt="{{title}}" class="feature-image" />
-          </div>
-          {{/if}}
-        </div>
+      </div>
       {{/page}}
-    {{/get}}
+      {{/get}}
+
+      <div class="panel">
+        <div class="grid">
+          {{#get "posts" filter="tag:code" limit="9" include="tags,authors" as |post|}}
+          {{#post}}
+          {{> card-code}}
+          {{/post}}
+          {{/get}}
+        </div>
+      </div>
+    </div>
+
+    <div class="write">
+      {{#get "pages" filter="tag:hash-home-write" include="tags,authors" as |page|}}
+      {{#page}}
+      <div class="panel">
+        <h2>{{title}}</h2>
+        {{content}}
+        {{#if feature_image}}
+        <div>
+          <img src="{{img_url feature_image}}" alt="{{title}}" class="feature-image" />
+        </div>
+        {{/if}}
+      </div>
+      {{/page}}
+      {{/get}}
+
+      <div class="panel">
+        <div class="grid">
+          {{#get "posts" filter="tag:write" limit="9" include="tags,authors" as |post|}}
+          {{#post}}
+          {{> card-write}}
+          {{/post}}
+          {{/get}}
+        </div>
+      </div>
+    </div>
 
   </div>
 </div>

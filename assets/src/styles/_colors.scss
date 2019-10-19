@@ -2,10 +2,29 @@
 $color-white: #ffffff;
 $color-black: #000000;
 
-$color-navigation-fg: $color-white;
-$color-navigation-bg: #191e26;
+$color-dark: #191e26;
+$color-light: $color-white;
 
-// $color-body: #2d4277;
+$color-navigation-fg: $color-white;
+$color-navigation-bg: $color-dark;
+
+$color-lane-fg: $color-white;
+$color-lane-bg: lighten($color-dark, 10%);
+
+$color-body: $color-light;
+$color-body-bg: $color-dark;
+// $color-body-bg: lighten($color-dark, 1%);
+$color-active: $color-light;
+
+$color-code-bg: lighten($color-dark, 2%);
+$color-write-bg: lighten($color-dark, 5%);
+
+$color-headings: $color-light;
+$color-brand: $color-light;
+$color-field-border: $color-light;
+$color-field-placeholder: $color-light;
+$color-faint: rgba($color-light, 0.5);
+
 $color-body-alternate: #494f62;
 $color-background-shade: #f7f7f7;
 $color-brand-marketing: #00cfff;
@@ -24,57 +43,3 @@ $color-button-tertiary: #194288;
 $color-button-tertiary-hover: #194288;
 $color-button-tertiary-active: #194288;
 $color-button-tertiary-disabled :#194288;
-
-$color-transparent: rgba(0, 0, 0, 0);
-
-$color-exclusive: #e6b272;
-
-
-// SFF colors
-$color-background: #a8b1da;
-$color-panel-bg: lighten($color-background, 30%);
-$color-body: darken($color-background, 80%);
-$color-brand: #b81717;
-
-// Colors v2
-//$color-brand: #2d4277;
-$color-heading: #2d4277;
-$color-heading-invert: $color-white;
-$color-lane-background: #2d4277;
-$color-lane-background-alt: $color-white;
-$color-lane-background-fade: #f8fafb;
-$color-lane-background-orange: #e6b272;
-$color-heading-sub: #e6b272;
-$color-active: #e6b272;
-$color-faint: #f2f3f5;
-$color-lane-grey: #f2f3f5;
-
-// Lanes
-$color-bg-lane-inverse: #505b77;
-
-
-$color-bg-lane: #f7f7f7;
-$color-bg-lane-darker: $color-faint;
-$color-bg-lane-blackout: #4f5f6b;
-$color-bg-lane-blackout-alt: $color-body;
-
-// Text
-$color-headings: $color-body;
-$color-body-faint: lighten($color-body, 30%);
-
-// Sidebar
-$color-sidebar: #fcfcfc;
-
-// Forms
-$color-field-placeholder: $color-body;
-$color-field-border: #c4cdd5;
-$color-button: $color-brand;
-$color-form-error: #ff0000;
-
-// Alias
-$color-link-hover: $color-brand;
-$color-brand-icon: $color-brand;
-
-// Footer
-$color-footer-titles: #75889d;
-$color-footer-background: #494f62;
