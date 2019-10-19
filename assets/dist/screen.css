@@ -49,7 +49,8 @@ table {
 body {
   background-color: #191e26;
   width: 100vw;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  font-size: 16px; }
 
 .sb {
   display: block;
@@ -58,6 +59,7 @@ body {
   overflow-x: hidden;
   max-width: 1400px;
   margin: 0 auto;
+  padding-top: 2rem;
   background-color: #191e26; }
 
 .wrapper {
@@ -136,7 +138,7 @@ body {
 
 p {
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.38;
   color: #ffffff;
   margin-bottom: 2rem; }
@@ -296,6 +298,10 @@ body {
     background-color: #000000; }
   body::-webkit-scrollbar-thumb {
     background-color: #000000; }
+
+ul,
+ol {
+  color: #ffffff; }
 
 .lane__content img {
   max-width: 100%; }
@@ -1348,26 +1354,51 @@ textarea {
     padding-bottom: 2rem; }
 
 .navigation {
+  display: block;
+  width: 100%;
+  position: fixed;
+  top: 0;
   color: #ffffff;
   align-items: center;
-  font-family: "PT Sans Narrow", sans-serif; }
+  font-family: "PT Sans Narrow", sans-serif;
+  z-index: 2; }
   .navigation__title {
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 4px;
     color: rgba(255, 255, 255, 0.2); }
   .navigation__logo {
-    margin-right: 1rem; }
+    margin-right: 1rem;
+    backdrop-filter: blur(2px); }
     .navigation__logo img {
       width: 32px; }
   .navigation__actions {
     display: flex;
     padding: 0 1rem;
-    background-color: #191e26; }
+    backdrop-filter: blur(4px);
+    background-color: rgba(25, 30, 38, 0.1); }
   .navigation__menu {
     display: none; }
     .is-active .navigation__menu {
-      display: block; }
+      display: block;
+      position: absolute;
+      margin-top: 2px;
+      padding: 1rem 1rem 0 1rem;
+      min-width: 200px;
+      border: 1px solid #ffffff;
+      text-align: left;
+      z-index: 2;
+      font-size: 18px;
+      backdrop-filter: blur(4px); }
+      @media (min-width: 768px) {
+        .is-active .navigation__menu {
+          right: 1rem; } }
+  .navigation__link {
+    display: block;
+    color: #ffffff;
+    padding-bottom: 1rem; }
+    .navigation__link:hover, .navigation__link:focus {
+      color: #ffffff; }
   .navigation .left {
     display: flex;
     align-items: center;
@@ -1375,6 +1406,11 @@ textarea {
   .navigation .right {
     display: flex;
     margin-right: -1rem; }
+
+.hamburger {
+  outline: none; }
+  .hamburger:focus {
+    outline: 1px solid #ffffff; }
 
 .card {
   padding: 1rem; }

@@ -17,7 +17,7 @@ body {
 
 p {
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.38;
   color: $color-body;
   margin-bottom: 2rem;
@@ -209,8 +209,7 @@ body {
 
 ul,
 ol {
-
-
+  color: $color-body;
 }
 
 // ############################################################################

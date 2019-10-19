@@ -6,6 +6,7 @@ body {
   background-color: $color-body-bg;
   width: 100vw;
   overflow-x: hidden;
+  font-size: $body-font-size;
 }
 
 .sb {
@@ -15,6 +16,7 @@ body {
   overflow-x: hidden;
   max-width: 1400px;
   margin: 0 auto;
+  padding-top: 2rem;
   background-color: $color-dark;
 }
 

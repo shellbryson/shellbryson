@@ -4,10 +4,14 @@
 // *****************************************************************************
 
 .navigation {
-
+  display: block;
+  width: 100%;
+  position: fixed;
+  top: 0;
   color: $color-navigation-fg;
   align-items: center;
   font-family: $base-font-heading;
+  z-index: 2;
 
   &__title {
     font-size: 1rem;
@@ -18,6 +22,7 @@
 
   &__logo {
     margin-right: 1rem;
+    backdrop-filter: blur(2px);
 
     img {
       width: 32px;
@@ -27,7 +32,8 @@
   &__actions {
     display: flex;
     padding: 0 1rem;
-    background-color: $color-navigation-bg;
+    backdrop-filter: blur(4px);
+    background-color: rgba($color-navigation-bg, 0.1);
   }
 
   &__menu {
@@ -35,6 +41,31 @@
 
     .is-active & {
       display: block;
+      position: absolute;
+      margin-top: 2px;
+      padding: 1rem 1rem 0 1rem;
+      min-width: 200px;
+      border: 1px solid $color-body;
+      text-align: left;
+      z-index: 2;
+      font-size: 18px;
+      backdrop-filter: blur(4px);
+
+      @include small {
+        right: 1rem;
+      }
+    }
+
+  }
+
+  &__link {
+    display: block;
+    color: $color-body;
+    padding-bottom: 1rem;
+
+    &:hover,
+    &:focus {
+      color: $color-body;
     }
   }
 
@@ -47,5 +78,13 @@
   .right {
     display: flex;
     margin-right: -1rem;
+  }
+}
+
+.hamburger {
+  outline: none;
+
+  &:focus {
+    outline: 1px solid $color-body;
   }
 }
