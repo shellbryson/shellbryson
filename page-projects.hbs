@@ -1,10 +1,38 @@
 {{!< default}}
 
 <div class="lane">
-  {{#page}}
-  <h1>{{title}}</h1>
+  <div class="panel">
+    {{#post}}
+    <h1>{{title}}</h1>
 
-  {{content}}
+    {{content}}
 
-  {{/page}}
+    {{/post}}
+  </div>
+</div>
+
+<div class="lane">
+  <div class="panel">
+    <h2>Blog</h2>
+    <div class="grid grid--big">
+      {{#get "posts" filter="tag:code" limit="9" include="tags,authors" as |post|}}
+      {{#post}}
+      {{> card-code}}
+      {{/post}}
+      {{/get}}
+    </div>
+  </div>
+</div>
+
+<div class="lane">
+  <div class="panel">
+    <h2>Projects</h2>
+    <div class="grid grid--big">
+      {{#get "pages" filter="tag:project" limit="9" include="tags,authors" as |page|}}
+      {{#page}}
+      {{> card-project}}
+      {{/page}}
+      {{/get}}
+    </div>
+  </div>
 </div>

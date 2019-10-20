@@ -76,6 +76,18 @@ body {
   @include medium {
     grid-template-columns: 1fr 1fr;
   }
+
+  &--big {
+    grid-template-columns: 1fr 1fr;
+
+    @include small {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @include medium {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
 }
 
 .panel {

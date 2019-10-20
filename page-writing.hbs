@@ -1,10 +1,23 @@
 {{!< default}}
 
 <div class="lane">
-  {{#page}}
-  <h1>{{title}}</h1>
+  <div class="panel">
+    {{#post}}
+    <h1>{{title}}</h1>
+    {{content}}
+    {{/post}}
+  </div>
+</div>
 
-  {{content}}
-
-  {{/page}}
+<div class="lane">
+  <div class="panel">
+    <h2>Posts on writing</h2>
+    <div class="grid grid--big">
+      {{#get "posts" filter="tag:write" limit="9" include="tags,authors" as |post|}}
+      {{#post}}
+      {{> card-code}}
+      {{/post}}
+      {{/get}}
+    </div>
+  </div>
 </div>
