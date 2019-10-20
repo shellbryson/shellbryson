@@ -17,7 +17,7 @@ body {
 
 p {
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   line-height: 1.38;
   color: $color-body;
   margin-bottom: 2rem;
@@ -68,10 +68,12 @@ h5 {
 
   .code & {
     font-family: $base-font-heading-code;
+    color: $color-headings-code;
   }
 
   .write & {
     font-family: $base-font-heading-write;
+    color: $color-headings-write;
   }
 }
 
@@ -128,7 +130,8 @@ h2 {
 
   .write & {
     display: inline-block;
-    border-bottom: 1px dotted rgba($color-light, 0.5);
+    padding-right: 2rem;
+    border-bottom: 1px dashed rgba($color-light, 0.5);
   }
 }
 

@@ -2,8 +2,15 @@
 
   <div class="navigation__actions">
     <div class="left">
-      <div class="navigation__logo"><img src="{{asset 'dist/images/logo.svg'}}"></div>
-      <div class="navigation__title">{{@site.title}}</div>
+      <div class="navigation__logo">
+        <a href="/">
+          <img src="{{asset 'dist/images/logo.svg'}}" alt="Shell Bryson logo image"></div>
+        </a>
+      <div class="navigation__title">
+        <a href="/">
+          {{@site.title}}
+        </a>
+      </div>
     </div>
     <div class="right">
       <div class="navigation__mobile">

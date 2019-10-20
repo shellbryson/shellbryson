@@ -8,8 +8,17 @@
       {{content}}
       {{/post}}
     </div>
-    <div class="panel">
-      sidebar
+    <div class="sidebar">
+      <div class="panel">
+        {{>sidebar-search}}
+      </div>
+      <div class="grid">
+        {{#get "posts" filter="tag:code" limit="9" include="tags,authors" as |post|}}
+        {{#post}}
+        {{> card-code}}
+        {{/post}}
+        {{/get}}
+      </div>
     </div>
   </div>
 </div>

@@ -1,9 +1,12 @@
 // Base colors
 $color-white: #ffffff;
 $color-black: #000000;
+$color-brand: #9A0013;
+$color-blue: #8fa3cc;
+$color-green: #5c8a8a;
 
 $color-dark: #191e26;
-$color-light: $color-white;
+$color-light: #abb2bc;
 
 $color-navigation-fg: $color-white;
 $color-navigation-bg: $color-dark;
@@ -13,21 +16,19 @@ $color-lane-bg: lighten($color-dark, 10%);
 
 $color-body: $color-light;
 $color-body-bg: $color-dark;
-// $color-body-bg: lighten($color-dark, 1%);
 $color-active: $color-light;
 
 $color-code-bg: lighten($color-dark, 2%);
 $color-write-bg: lighten($color-dark, 5%);
 
-$color-headings: $color-light;
-$color-brand: $color-light;
+$color-headings: $color-body;
+$color-headings-code: $color-blue;
+$color-headings-write: $color-green;
 $color-field-border: $color-light;
 $color-field-placeholder: $color-light;
 $color-faint: rgba($color-light, 0.5);
 
 $color-body-alternate: #494f62;
-$color-background-shade: #f7f7f7;
-$color-brand-marketing: #00cfff;
 
 $color-button-primary: #e01053;
 $color-button-primary-hover: #fd3b7a;

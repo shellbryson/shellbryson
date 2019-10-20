@@ -17,13 +17,20 @@
   &__title {
     font-size: 1rem;
     text-transform: uppercase;
-    letter-spacing: 4px;
-    color: rgba($color-navigation-fg, 0.2%);
+    color: $color-body;
+    transition: $animation-speed-slow;
+
+    a {
+      color: $color-body;
+      transition: $animation-speed-slow;
+      letter-spacing: 4px;
+    }
   }
 
   &__logo {
     margin-right: 1rem;
     backdrop-filter: blur(2px);
+    transition: $animation-speed-slow;
 
     img {
       width: 32px;
@@ -34,7 +41,8 @@
     display: flex;
     padding-left: 1rem;
     backdrop-filter: blur(4px);
-    background-color: rgba($color-navigation-bg, 0.1);
+    background-color: rgba($color-navigation-bg, 0.2);
+    border-bottom: 1px solid $color-black;
   }
 
   &__menu {
@@ -75,6 +83,22 @@
     display: flex;
     align-items: center;
     width: 100%;
+
+    &:hover {
+
+      .navigation__logo {
+        transform: scale(1.1);
+      }
+
+      .navigation__title {
+        transform: scale(1.05);
+
+        a {
+          color: $color-brand;
+          //letter-spacing: 5px;
+        }
+      }
+    }
   }
 
   .right {
