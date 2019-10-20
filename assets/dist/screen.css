@@ -112,6 +112,15 @@ body {
     padding: 1rem 0;
     color: #abb2bc;
     text-decoration: none; }
+  .panel .kg-image-card img {
+    display: block;
+    width: 60%;
+    max-width: 600px;
+    margin: 1rem auto;
+    border: 3px solid #000000; }
+    @media (min-width: 768px) {
+      .panel .kg-image-card img {
+        width: 100%; } }
 
 .code {
   background-color: #1d232c;
@@ -326,7 +335,11 @@ body {
 
 ul,
 ol {
+  font-size: 1.4rem;
   color: #abb2bc; }
+
+li::before {
+  content: "\200B"; }
 
 .lane__content img {
   max-width: 100%; }
@@ -341,9 +354,6 @@ ol {
     margin-left: auto;
     margin-right: auto;
     max-width: 200px !important; }
-
-.lane__content strong {
-  font-family: "PT Sans", sans-serif; }
 
 blockquote p {
   font-style: italic;
@@ -413,15 +423,12 @@ a {
       color: #ffffff;
       border-bottom: 1px solid rgba(255, 255, 255, 0.9); }
 
-strong {
-  font-weight: 600; }
-
-.mz-video {
+.video {
   height: 0px;
   position: relative;
   margin: 1rem 0;
   padding-top: 56.25%; }
-  .mz-video__source {
+  .video__source {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -1263,120 +1270,19 @@ textarea {
     .footer {
       margin: 75px auto 0; } }
   .footer a {
-    display: block;
-    color: #abb2bc; }
+    color: #abb2bc;
+    border-bottom: 1px dashed #abb2bc;
+    transition: 600ms; }
     .footer a:hover, .footer a:focus {
       color: #9A0013; }
   .footer p {
-    text-align: left; }
-  .footer address {
-    margin-bottom: 1rem; }
-    .footer address div {
-      margin-bottom: 0.5rem; }
-  .footer ul + header {
-    margin-top: 2rem; }
-  .footer p + form input {
-    margin-top: 0; }
-  .footer__columns {
-    display: grid;
-    grid-column-gap: 2rem;
-    grid-row-gap: 3rem;
-    grid-template-columns: 1fr; }
-    @media (min-width: 400px) {
-      .footer__columns {
-        grid-template-columns: 1fr 1fr; } }
-    @media (min-width: 768px) {
-      .footer__columns {
-        grid-column-gap: 3rem;
-        grid-template-columns: 1fr 1fr 1fr; } }
-    @media (min-width: 1200px) {
-      .footer__columns {
-        grid-template-columns: 1fr 1fr 1fr 1fr; } }
-  .footer__column h2 {
-    font-size: 18px; }
-    @media (min-width: 768px) {
-      .footer__column h2 {
-        font-size: 18px;
-        margin-bottom: 1rem; } }
-    @media (min-width: 1024px) {
-      .footer__column h2 {
-        font-size: 18px;
-        margin-bottom: 1rem; } }
-  .footer__form {
-    margin-bottom: 2rem; }
-    .footer__form input {
-      height: 30px;
-      height: 1.875rem;
-      line-height: 30px;
-      line-height: 1.875rem;
-      padding: 0 8px;
-      padding: 0 0.5rem;
-      font-size: 16px;
-      font-size: 1rem;
-      margin: 16px 0;
-      box-sizing: border-box;
-      width: 100%;
-      border: 1px solid #abb2bc;
-      border-radius: 5px;
-      color: #000000;
-      background-color: rgba(171, 178, 188, 0.5);
-      transition: 250ms; }
-      .footer__form input::-webkit-input-placeholder {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        color: #abb2bc;
-        opacity: 1; }
-      .footer__form input:-ms-input-placeholder {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        color: #abb2bc;
-        opacity: 1; }
-      .footer__form input::-moz-placeholder {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        color: #abb2bc;
-        opacity: 1; }
-      .footer__form input:-moz-placeholder {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        color: #abb2bc;
-        opacity: 1; }
-    .footer__form button {
-      display: block;
-      height: 40px;
-      padding: 0 2rem;
-      border-radius: 20px;
-      font-size: 1rem;
-      font-family: "PT Sans", sans-serif;
-      line-height: 40px;
-      color: #ffffff;
-      background-color: #e01053;
-      text-align: center;
-      text-transform: uppercase;
-      border: 0; }
-      .footer__form button:focus, .footer__form button:hover {
-        background-color: #fd3b7a;
-        color: #ffffff; }
-      .footer__form button:active {
-        background-color: #ae0c40; }
+    text-align: center;
+    font-size: 0.75rem;
+    margin: 4px; }
   .footer__logo {
     display: block;
-    margin-bottom: 16px; }
-  .footer__heading {
-    text-transform: capitalize; }
-  .footer__obi {
-    border-top: 1px solid #9A0013;
-    margin-top: 2rem;
-    padding-top: 2rem;
-    text-align: center; }
-  .footer__social {
-    display: flex;
-    margin: 2rem 0; }
-  .footer__social-link {
-    margin-right: 16px; }
-  .footer__copyright {
-    color: #abb2bc;
-    padding-bottom: 2rem; }
+    margin: 1rem auto;
+    width: 32px; }
 
 .navigation {
   display: block;
