@@ -40,10 +40,6 @@ body {
   @include small {
     grid-template-columns: 1fr 1fr;
   }
-
-  > div {
-    width: 100%;
-  }
 }
 
 .split-uneven {
@@ -54,10 +50,6 @@ body {
 
   @include small {
     grid-template-columns: 2fr 1fr;
-  }
-
-  > div {
-    width: 100%;
   }
 }
 

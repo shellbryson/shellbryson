@@ -1,0 +1,11 @@
+<svg width="1500px" height="1000px" viewBox="0 0 1500 1000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="4vc-mono-copy-2">
+            <rect x="0" y="0" width="1500" height="1000"></rect>
+            <polygon id="chev4" fill="#EDEAEA" points="500 500 1000 1000 0 1000"></polygon>
+            <polygon id="chev3" fill="#D8D8D8" points="999.5 1000 500 500 1500 500"></polygon>
+            <polygon id="chev2" fill="#757575" points="1000 -5.68434189e-14 1500 500 500 500"></polygon>
+            <polygon id="chev1" fill="#757575" points="500 500 0 5.68434189e-14 1000 5.68434189e-14"></polygon>
+        </g>
+    </g>
+</svg>

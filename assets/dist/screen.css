@@ -79,8 +79,6 @@ body {
   @media (min-width: 768px) {
     .split {
       grid-template-columns: 1fr 1fr; } }
-  .split > div {
-    width: 100%; }
 
 .split-uneven {
   display: grid;
@@ -90,8 +88,6 @@ body {
   @media (min-width: 768px) {
     .split-uneven {
       grid-template-columns: 2fr 1fr; } }
-  .split-uneven > div {
-    width: 100%; }
 
 @media (min-width: 768px) {
   .sidebar {
@@ -480,90 +476,56 @@ textarea {
 
 .form {
   margin-top: 2rem; }
-  .form__intro {
-    width: 100%; }
-    @media (min-width: 768px) {
-      .form__intro {
-        width: 55%; } }
   @media (min-width: 768px) {
     .form__elements {
       display: flex;
-      margin: 32px 0;
       justify-content: space-between; } }
-  @media (min-width: 768px) {
-    .form__elements .form__element {
-      margin-right: 16px;
-      margin-left: 16px; } }
-  .form__elements .form__element:first-child {
-    margin-left: 0; }
-    @media (min-width: 768px) {
-      .form__elements .form__element:first-child {
-        margin-left: 0; } }
-  .form__elements .form__element:last-child {
-    margin-right: 0; }
-    @media (min-width: 768px) {
-      .form__elements .form__element:last-child {
-        margin-right: 0; } }
   .form__element {
-    width: 100%; }
-  .form__input, .form__textarea {
-    height: 44px;
-    height: 2.75rem;
-    line-height: 44px;
-    line-height: 2.75rem;
-    margin-bottom: 16px;
-    margin-bottom: 1rem;
-    padding: 0 16px;
-    padding: 0 1rem;
-    font-size: 16px;
-    font-size: 1rem;
-    box-sizing: border-box;
     width: 100%;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    height: 34px;
+    padding: 0 4px;
+    box-sizing: border-box;
+    line-height: 2rem;
     border: 1px solid #abb2bc;
-    border-radius: 5px;
-    color: #000000;
+    color: #abb2bc;
     background-color: rgba(171, 178, 188, 0.5);
     transition: 250ms; }
-    .form__input::-webkit-input-placeholder, .form__textarea::-webkit-input-placeholder {
+    .form__element::-webkit-input-placeholder {
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       color: #abb2bc;
       opacity: 1; }
-    .form__input:-ms-input-placeholder, .form__textarea:-ms-input-placeholder {
+    .form__element:-ms-input-placeholder {
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       color: #abb2bc;
       opacity: 1; }
-    .form__input::-moz-placeholder, .form__textarea::-moz-placeholder {
+    .form__element::-moz-placeholder {
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       color: #abb2bc;
       opacity: 1; }
-    .form__input:-moz-placeholder, .form__textarea:-moz-placeholder {
+    .form__element:-moz-placeholder {
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       color: #abb2bc;
       opacity: 1; }
-    @media (min-width: 768px) {
-      .form__input, .form__textarea {
-        height: 50px;
-        height: 3.125rem;
-        line-height: 50px;
-        line-height: 3.125rem;
-        font-size: 16px;
-        font-size: 1rem;
-        width: 100%; } }
-    .form__input:focus::placeholder, .form__input:hover::placeholder, .form__textarea:focus::placeholder, .form__textarea:hover::placeholder {
+    .form__element:focus::placeholder, .form__element:hover::placeholder {
       color: #9A0013;
       opacity: 0.8; }
-    .form__input::placeholder, .form__textarea::placeholder {
+    .form__element::placeholder {
       color: #9A0013;
       opacity: 0.5;
       transition: 250ms; }
-  .form__textarea {
-    height: 100px;
-    line-height: 1.1;
-    padding: 1rem; }
+  .form__button {
+    display: block;
+    border: none;
+    background-color: #abb2bc;
+    line-height: 2rem;
+    height: 34px;
+    color: #191e26; }
 
 /*!
  * Hamburgers
@@ -1374,4 +1336,23 @@ textarea {
     background-color: rgba(171, 178, 188, 0.1); }
   .write .card {
     background-color: #171c23; }
+
+.sidebar-search {
+  position: relative; }
+  .sidebar-search__results {
+    position: absolute;
+    padding: 1rem;
+    border: 1px solid #abb2bc;
+    background: rgba(25, 30, 38, 0.5);
+    backdrop-filter: blur(4px); }
+    .sidebar-search__results:empty {
+      display: none; }
+    .sidebar-search__results p {
+      background-image: url("images/logo-bullet.svg");
+      background-repeat: no-repeat;
+      background-size: 18px 32px;
+      background-position: 0 50%;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      padding-left: 2rem; }
 /*# sourceMappingURL=screen.css.map */

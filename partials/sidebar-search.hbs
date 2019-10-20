@@ -1,8 +1,10 @@
-<section class="sidebar__search">
+<section class="sidebar-search">
   <h3>Search</h3>
-  <form>
-    <input type="text" id="search-field" />
-    <button type="submit" class="mz-button mz-button--secondary">Search</button>
+  <form class="form">
+    <div class="form__elements">
+      <input type="text" id="search-field" class="form__element" />
+      <button type="submit" class="form__button">Search</button>
+    </div>
+    <div id="results" class="sidebar-search__results"></div>
   </form>
-  <div id="results" class="sidebar__results"></div>
 </section>

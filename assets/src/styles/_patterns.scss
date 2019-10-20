@@ -432,78 +432,33 @@ textarea {
 
 // Regular forms
 .form {
-
-  $root: &;
-
   margin-top: 2rem;
-
-  &__intro {
-    width: 100%;
-
-    @include breakpoint(768px) {
-      width: 55%;
-    }
-  }
 
   &__elements {
 
     @include small {
       display: flex;
-      margin: 32px 0;
       justify-content: space-between;
     }
 
     .form__element {
 
-      @include small {
-        margin-right: 16px;
-        margin-left: 16px;
-      }
-
-      &:first-child {
-        margin-left: 0;
-
-        @include small {
-          margin-left: 0;
-        }
-      }
-
-      &:last-child {
-        margin-right: 0;
-
-        @include small {
-          margin-right: 0;
-        }
-      }
     }
   }
 
   &__element {
-    width: 100%;
-  }
-
-  &__input,
-  &__textarea {
     @include placeholder($color-field-placeholder);
-    @include rem(height, 44px);
-    @include rem(line-height, 44px);
-    @include rem(margin-bottom, 16px);
-    @include rem(padding, 0 16px);
-    @include rem(font-size, 16px);
-    box-sizing: border-box;
     width: 100%;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    height: 34px;
+    padding: 0 4px;
+    box-sizing: border-box;
+    line-height: 2rem;
     border: 1px solid $color-field-border;
-    border-radius: 5px;
-    color: $color-black;
+    color: $color-body;
     background-color: $color-faint;
     transition: 250ms;
-
-    @include small {
-      @include rem(height, 50px);
-      @include rem(line-height, 50px);
-      @include rem(font-size, 16px);
-      width: 100%;
-    }
 
     &:focus,
     &:hover {
@@ -520,10 +475,13 @@ textarea {
     }
   }
 
-  &__textarea {
-    height: 100px;
-    line-height: 1.1;
-    padding: 1rem;
+  &__button {
+    display: block;
+    border: none;
+    background-color: $color-body;
+    line-height: 2rem;
+    height: 34px;
+    color: $color-dark;
   }
 
 }

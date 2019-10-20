@@ -1,0 +1,29 @@
+// ############################################################################
+// Search
+// ############################################################################
+
+.sidebar-search {
+  position: relative;
+
+  &__results {
+    position: absolute;
+    padding: 1rem;
+    border: 1px solid $color-body;
+    background: rgba($color-dark, 0.5);
+    backdrop-filter: blur(4px);
+
+    &:empty {
+      display: none;
+    }
+
+    p {
+      background-image: url('images/logo-bullet.svg');
+      background-repeat: no-repeat;
+      background-size: 18px 32px;
+      background-position: 0 50%;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      padding-left: 2rem;
+    }
+  }
+}
