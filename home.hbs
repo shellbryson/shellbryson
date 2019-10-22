@@ -4,7 +4,7 @@
   <div>
     {{#get "pages" filter="tag:hash-home-intro" include="tags,authors" as |page|}}
       {{#page}}
-      <div class="panel">
+      <div class="panel panel--masthead">
         <h1 class="reveal reveal--delay-1">{{title}}</h1>
         {{content}}
         {{#if feature_image}}
