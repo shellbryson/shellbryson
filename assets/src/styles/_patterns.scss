@@ -27,7 +27,7 @@ p {
   }
 
   @include medium {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
   }
 
   &:last-child {
@@ -235,9 +235,34 @@ ol {
 }
 
 li {
+  display: block;
+  position: relative;
+  padding-left: 2rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 1.38;
+  color: $color-body;
+
+  @include small {
+    font-size: 1.2rem;
+  }
+
+  @include medium {
+    font-size: 1.25rem;
+  }
 
   &::before {
-    content: "\200B";
+    display: block;
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 0;
+    top: -4px;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-image: url('/assets/dist/images/logo-bullet.svg');
+    background-size: 18px 32px;
   }
 }
 
@@ -245,28 +270,6 @@ li {
 // Images
 // ############################################################################
 
-img {
-
-  .lane__content & {
-    max-width: 100%;
-  }
-}
-
-.image {
-  display: block;
-
-  &--300 {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 300px!important;
-  }
-
-  &--200 {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 200px!important;
-  }
-}
 
 // ############################################################################
 // Quotes
@@ -285,11 +288,6 @@ blockquote {
     @include small {
       font-size: 32px;
     }
-  }
-
-  // We're inside an orange container, so...
-  .color-orange & {
-    color: $color-white;
   }
 
   cite {
@@ -322,10 +320,32 @@ a {
   @include font;
   font-weight: 600;
   text-decoration: none;
+  transition: $animation-speed;
+  color: $color-body;
+
+  .content & {
+
+    border-bottom: 1px dotted $color-body;
+
+    &:hover,
+    &:focus {
+      color: $color-body;
+      border-bottom: 1px dotted $color-brand;
+    }
+  }
 
   .button {
     color: $color-light;
     text-decoration: none;
+  }
+
+  .panel & {
+
+    p & {
+
+      color: $color-body;
+      border-bottom: $color-white;
+    }
   }
 
   .code & {
@@ -352,34 +372,6 @@ a {
     font-family: $base-font-body-write;
   }
 
-}
-
-// In content, optionally add this class for better typography
-.link {
-  @include font;
-  font-family: $base-font-medium;
-  color: $color-body;
-  text-decoration: none;
-  transition: $animation-speed;
-  border-bottom: 1px solid rgba($color-brand, 0.4);
-
-  &:hover,
-  &:focus {
-    color: $color-black;
-    border-bottom: 1px solid rgba($color-brand, 0.9);
-  }
-
-  // Inside an inverted (dark) background
-  .lane--inverse & {
-    color: $color-white;
-    border-bottom: 1px solid rgba($color-white, 0.4);
-
-    &:hover,
-    &:focus {
-      color: $color-white;
-      border-bottom: 1px solid rgba($color-white, 0.9);
-    }
-  }
 }
 
 // ############################################################################
