@@ -53,35 +53,6 @@ body {
   }
 }
 
-.sidebar {
-
-  @include small {
-    border-left: 2px dotted $color-black;
-  }
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-
-  @include medium {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  &--big {
-    grid-template-columns: 1fr 1fr;
-
-    @include small {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    @include medium {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-  }
-}
-
 .panel {
   padding: 1rem;
 

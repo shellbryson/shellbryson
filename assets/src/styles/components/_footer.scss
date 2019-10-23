@@ -4,6 +4,7 @@
 
 .footer {
   color: $color-body;
+  border-top: 1px solid $color-black;
 
   @include small {
     margin: 75px auto 0;
