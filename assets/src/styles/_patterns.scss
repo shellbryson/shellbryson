@@ -55,7 +55,6 @@ p {
 %heading {
   text-rendering: optimizeLegibility;
   line-height: 1;
-  margin-top: 20px;
   letter-spacing: 2px;
   font-weight: normal;
 }
@@ -148,7 +147,7 @@ h2 {
   }
 
   .write & {
-    display: inline-block;
+    display: block;
     padding-right: 2rem;
     border-bottom: 1px dashed rgba($color-light, 0.5);
   }
@@ -188,7 +187,7 @@ h3 {
   }
 
   .write & {
-    display: inline-block;
+    display: block;
     border-bottom: 1px dotted rgba($color-light, 0.5);
   }
 }
