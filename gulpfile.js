@@ -14,12 +14,12 @@ const customProperties = require('postcss-custom-properties');
 const easyimport = require('postcss-easy-import');
 const sass = require('gulp-sass');
 
-function serve(done) {
+const serve = done => {
   livereload.listen();
   done();
 }
 
-const handleError = (done) => {
+const handleError = done => {
   return function (err) {
     if (err) {
       beeper();
@@ -28,14 +28,14 @@ const handleError = (done) => {
   };
 };
 
-function hbs(done) {
+const hbs = done => {
   pump([
       src(['*.hbs', 'partials/**/*.hbs', '!node_modules/**/*.hbs']),
       livereload()
   ], handleError(done));
 }
 
-function fonts(done) {
+const fonts = done => {
   pump([
     src('assets/src/fonts/**', {}),
     dest('assets/dist/fonts/', {}),
@@ -43,7 +43,7 @@ function fonts(done) {
   ], handleError(done));
 }
 
-function images(done) {
+const images = done => {
   pump([
     src('assets/src/images/**', {}),
     dest('assets/dist/images/', {}),
@@ -51,7 +51,7 @@ function images(done) {
   ], handleError(done));
 }
 
-function css(done) {
+const css = done => {
   var processors = [
     easyimport,
     customProperties({preserve: false}),
@@ -68,7 +68,7 @@ function css(done) {
   ], handleError(done));
 }
 
-function scss(done) {
+const scss = done => {
   pump([
     src('assets/src/styles/*.scss', {sourcemaps: true}),
     sass(),
@@ -77,7 +77,7 @@ function scss(done) {
   ], handleError(done));
 }
 
-function js(done) {
+const js = done => {
   pump([
     src('assets/src/scripts/**/*.js', {sourcemaps: true}),
     uglify(),
@@ -86,10 +86,10 @@ function js(done) {
   ], handleError(done));
 }
 
-function zipper(done) {
-  var targetDir = 'dist/';
-  var themeName = require('./package.json').name;
-  var filename = themeName + '.zip';
+const zipper = done => {
+  const targetDir = 'dist/';
+  const themeName = require('./package.json').name;
+  const filename = themeName + '.zip';
 
   pump([
     src([
