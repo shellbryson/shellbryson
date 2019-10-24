@@ -4,12 +4,17 @@
 @import "mixins";
 @import "colors";
 @import "layout";
-@import "patterns";
-@import "ghost";
 
 // Third party
+@import "vendor/fa/fontawesome";
+@import "vendor/fa/solid.scss";
+@import "vendor/fa/brands";
 @import "hamburger-settings";
 @import "node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
+
+// Base
+@import "patterns";
+@import "ghost";
 
 // Components
 @import "components/footer";

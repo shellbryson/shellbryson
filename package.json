@@ -2,7 +2,7 @@
   "name": "shellbryson",
   "description": "Shell Bryson Ghost Theme",
   "demo": "https://shellbryson.com",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "engines": {
     "ghost": ">=3.0.0",
     "ghost-api": "v2"
@@ -40,9 +40,9 @@
     "url": "https://github.com/shellbryson/shellbryson"
   },
   "devDependencies": {
-    "autoprefixer": "^9.6",
+    "autoprefixer": "^9.7.0",
     "cssnano": "4.1.10",
-    "gscan": "^3.0.1",
+    "gscan": "^3.1.0",
     "gulp": "^4.0.2",
     "gulp-livereload": "4.0.1",
     "gulp-postcss": "8.0.0",
