@@ -520,6 +520,51 @@ textarea {
     height: 34px;
     color: #191e26; }
 
+.kg-bookmark-card {
+  border: 1px silid red; }
+
+.kg-bookmark-container {
+  border: 1px silid red; }
+
+.kg-bookmark-content {
+  border: 1px silid red; }
+
+.kg-bookmark-title {
+  border: 1px silid red; }
+
+.kg-bookmark-description {
+  border: 1px silid red; }
+
+.kg-bookmark-metadata {
+  border: 1px silid red; }
+
+.kg-bookmark-icon {
+  border: 1px silid red; }
+
+.kg-bookmark-author {
+  border: 1px silid red; }
+
+.kg-bookmark-publisher {
+  border: 1px silid red; }
+
+.kg-bookmark-thumbnail {
+  border: 1px silid red; }
+
+.kg-width-wide {
+  border: 1px silid red; }
+
+.kg-width-full {
+  border: 1px silid red; }
+
+.kg-gallery-container {
+  border: 1px silid red; }
+
+.kg-gallery-row {
+  border: 1px silid red; }
+
+.kg-gallery-image {
+  border: 1px silid red; }
+
 /*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers

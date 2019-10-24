@@ -2,9 +2,9 @@
   "name": "shellbryson",
   "description": "Shell Bryson Ghost Theme",
   "demo": "https://shellbryson.com",
-  "version": "0.0.2",
+  "version": "0.1.3",
   "engines": {
-    "ghost": ">=2.0.0",
+    "ghost": ">=3.0.0",
     "ghost-api": "v2"
   },
   "screenshots": {
